@@ -18,21 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFm-zI-eqp">
-                                <rect key="frame" x="96" y="251.5" width="128" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFm-zI-eqp">
+                                <rect key="frame" x="96" y="230" width="128" height="128"/>
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.50588235290000005" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rFm-zI-eqp" secondAttribute="height" multiplier="90:60" id="76f-Hy-bfz"/>
+                                    <constraint firstAttribute="width" secondItem="rFm-zI-eqp" secondAttribute="height" multiplier="1:1" id="76f-Hy-bfz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Click">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="tap_btn_title"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wen-Ay-MKE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME: 30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-eY-Scz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-eY-Scz">
                                 <rect key="frame" x="0.0" y="20" width="320" height="242"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="h0d-eY-Scz" secondAttribute="height" multiplier="115:87" id="cd0-uX-PwJ"/>
@@ -40,6 +42,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="time_title"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWh-Lp-iNv">
                                 <rect key="frame" x="0.0" y="394.5" width="320" height="153.5"/>
@@ -49,6 +54,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="score_title"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79291616088311101" green="1" blue="0.86393091615877826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

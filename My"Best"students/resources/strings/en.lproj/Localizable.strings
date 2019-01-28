@@ -1,0 +1,10 @@
+/* 
+  Main.strings
+  "Best" students
+
+  Created by Ivan Kuzmin on 28/01/2019.
+  Copyright © 2019 Example. All rights reserved.
+*/
+"time_title" = "Time: %d";
+"score_title" = "Score: %d";
+"tap_btn_title" = "Tap me!";

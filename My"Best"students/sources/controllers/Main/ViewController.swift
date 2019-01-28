@@ -40,8 +40,9 @@ class ViewController: UIViewController {
     }
     
     private func updateTexts() {
-        Label30.text = "TIME: \(seconds)"
-        ScoreLabel.text = "Score: \(count)"
+//        NSLocalizedString
+        Label30.text = String(format: NSLocalizedString("time_title", comment: ""), seconds)
+        ScoreLabel.text = String(format:  NSLocalizedString("score_title", comment: ""), count)
     }
     
     @objc func subtractTime() {

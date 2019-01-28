@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Score"; ObjectID = "NWh-Lp-iNv"; */
+"NWh-Lp-iNv.text" = "Score";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "h0d-eY-Scz"; */
+"h0d-eY-Scz.text" = "Time";
+
+/* Class = "UIButton"; normalTitle = "Click"; ObjectID = "rFm-zI-eqp"; */
+"rFm-zI-eqp.normalTitle" = "Click";
