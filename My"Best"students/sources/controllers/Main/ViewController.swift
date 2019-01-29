@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var Label30: UILabel!
@@ -16,18 +17,28 @@ class ViewController: UIViewController {
     private var count: NSInteger = 0
     private var seconds: NSInteger = 10
     private var timer: Timer = Timer()
+    
+    private var buttonBeep: AVAudioPlayer = AVAudioPlayer();
+    private var secondBeep: AVAudioPlayer = AVAudioPlayer();
+    private var backgroundMusic: AVAudioPlayer = AVAudioPlayer();
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonBeep = MusicHelper().setupAudioPlayer(withFile: "ButtonTap", type: "wav")!
+        secondBeep = MusicHelper().setupAudioPlayer(withFile: "SecondBeep", type: "wav")!
+        backgroundMusic = MusicHelper().setupAudioPlayer(withFile: "HallOfTheMountainKing", type: "mp3")!
         self.setupGame()
     }
     
     @IBAction func ButtonPressed(_ sender: UIButton) {
         count += 1
         self.updateTexts()
+        buttonBeep.play()
     }
 
     private func setupGame() {
+        backgroundMusic.volume = 0.3
+        backgroundMusic.play()
         seconds = 10
         count = 0
         self.updateTexts()
@@ -59,6 +70,7 @@ class ViewController: UIViewController {
             alert.addAction(action1)
             self.present(alert, animated: true, completion: nil)
         }
+        secondBeep.play()
     }
 }
 
