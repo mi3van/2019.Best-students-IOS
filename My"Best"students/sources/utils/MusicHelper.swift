@@ -8,7 +8,7 @@
 import AVFoundation
 
 class MusicHelper {
-    func setupAudioPlayer(withFile file: String?, type: String?) -> AVAudioPlayer? {
+    static func setupAudioPlayer(withFile file: String?, type: String?) -> AVAudioPlayer? {
         let path = Bundle.main.path(forResource: file, ofType: type)
         let url = URL(fileURLWithPath: path ?? "")
         

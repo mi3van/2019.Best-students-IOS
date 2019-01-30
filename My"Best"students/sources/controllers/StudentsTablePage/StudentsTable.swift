@@ -16,23 +16,27 @@ class StudentsTable: UITableViewController {
     }
     
     private func initTable() {
-        var student = ModelStudent()
-        student.name = "Bill"
-        student.surname = "Evans"
-        student.assessment = 4
-        students.append(student)
-        
-        student = ModelStudent()
-        student.name = "Oscar"
-        student.surname = "Peterson"
-        student.assessment = 5
-        students.append(student)
-        
-        student = ModelStudent()
-        student.name = "Dave"
-        student.surname = "Brubeck"
-        student.assessment = 3
-        students.append(student)
+        let data: AnyObject? = DataHelper.loadData(with: AppCommonKeys.SAVE_STUDENTS_KEY)
+        if data != nil {
+            students = data as! [ModelStudent]
+        }
+        //var student = ModelStudent()
+        //student.name = "Bill"
+        //student.surname = "Evans"
+        //student.assessment = 4
+        //students.append(student)
+        //
+        //student = ModelStudent()
+        //student.name = "Oscar"
+        //student.surname = "Peterson"
+        //student.assessment = 5
+        //students.append(student)
+        //
+        //student = ModelStudent()
+        //student.name = "Dave"
+        //student.surname = "Brubeck"
+        //student.assessment = 3
+        //students.append(student)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

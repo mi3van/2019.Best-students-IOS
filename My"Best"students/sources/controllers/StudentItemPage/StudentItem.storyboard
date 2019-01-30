@@ -30,6 +30,8 @@
                         <viewLayoutGuide key="safeArea" id="lae-Me-Hib"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hqg-go-h55">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="JiM-hR-CxC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="G5e-aB-ako"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_btn"/>
                         </userDefinedRuntimeAttributes>

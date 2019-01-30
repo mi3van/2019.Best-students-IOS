@@ -24,9 +24,9 @@ class GameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonBeep = MusicHelper().setupAudioPlayer(withFile: "ButtonTap", type: "wav")!
-        secondBeep = MusicHelper().setupAudioPlayer(withFile: "SecondBeep", type: "wav")!
-        backgroundMusic = MusicHelper().setupAudioPlayer(withFile: "HallOfTheMountainKing", type: "mp3")!
+        buttonBeep = MusicHelper.setupAudioPlayer(withFile: "ButtonTap", type: "wav")!
+        secondBeep = MusicHelper.setupAudioPlayer(withFile: "SecondBeep", type: "wav")!
+        backgroundMusic = MusicHelper.setupAudioPlayer(withFile: "HallOfTheMountainKing", type: "mp3")!
         self.setupGame()
     }
     
