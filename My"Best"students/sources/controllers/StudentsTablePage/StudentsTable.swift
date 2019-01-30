@@ -33,8 +33,6 @@ class StudentsTable: UITableViewController {
         student.surname = "Brubeck"
         student.assessment = 3
         students.append(student)
-        
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,6 +49,9 @@ class StudentsTable: UITableViewController {
         let student = (students)[indexPath.row]
         cell?.textLabel?.text = ("\(student.name) \(student.surname)")
         cell?.detailTextLabel?.text = String(student.assessment)
+        let customColorView = UIView()
+        customColorView.backgroundColor = UIColor(red: 0 / 255.0, green: 144 / 255.0, blue: 85 / 255.0, alpha: 0.5)
+        cell?.selectedBackgroundView = customColorView;
         
         return cell!
     }

@@ -45,6 +45,9 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.79291616090000006" green="1" blue="0.86393091619999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="DBY-BD-epg" kind="show" id="uFT-Q2-MZg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,13 +65,13 @@
             </objects>
             <point key="canvasLocation" x="369" y="55"/>
         </scene>
-        <!--GameController-->
-        <scene sceneID="5sV-qQ-9EE">
+        <!--StudentItemPage-->
+        <scene sceneID="46t-yB-HUz">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="GameController" storyboardName="Game" referencedIdentifier="GameController" id="2W3-tj-FJj" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sNN-ph-Q0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="StudentItemPage" storyboardName="StudentItem" referencedIdentifier="StudentItemPage" id="DBY-BD-epg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMz-lj-wzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="55"/>
+            <point key="canvasLocation" x="966" y="54"/>
         </scene>
     </scenes>
 </document>

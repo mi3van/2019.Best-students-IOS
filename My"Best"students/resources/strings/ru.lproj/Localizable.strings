@@ -9,3 +9,7 @@
 "score_title" = "Очки: %d";
 "tap_btn_title" = "Нажми на меня!";
 "students_title" = "Студенты";
+
+"edit_btn" = "Редактировать";
+"cancel_btn" = "Отмена";
+"save_btn" = "Сохранить";

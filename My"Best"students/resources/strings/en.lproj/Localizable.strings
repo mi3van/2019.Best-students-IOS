@@ -9,3 +9,7 @@
 "score_title" = "Score: %d";
 "tap_btn_title" = "Tap me!";
 "students_title" = "Students";
+
+"edit_btn" = "Edit";
+"cancel_btn" = "Cancel";
+"save_btn" = "Save";
