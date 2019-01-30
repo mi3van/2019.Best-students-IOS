@@ -33,8 +33,10 @@
 		2C6EC7B1220060AE0095A759 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7B0220060AE0095A759 /* MusicHelper.swift */; };
 		2C6EC7B42200B6CA0095A759 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7B32200B6CA0095A759 /* GameController.swift */; };
 		2C6EC7B62200B7980095A759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6EC7B52200B7980095A759 /* Main.storyboard */; };
+		2C6EC7B82201AB100095A759 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7B72201AB100095A759 /* MainNavigationController.swift */; };
+		2C6EC7BB2201AD3D0095A759 /* StudentsTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6EC7BA2201AD3D0095A759 /* StudentsTable.storyboard */; };
 		2CCD9C3B21F8EA030089C985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3A21F8EA030089C985 /* AppDelegate.swift */; };
-		2CCD9C3D21F8EA030089C985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3C21F8EA030089C985 /* ViewController.swift */; };
+		2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */; };
 		2CCD9C4321F8EA030089C985 /* My_Best_students.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C4121F8EA030089C985 /* My_Best_students.xcdatamodeld */; };
 		2CCD9C4821F8EA040089C985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCD9C4621F8EA040089C985 /* LaunchScreen.storyboard */; };
 		2CCD9C5821F8EC280089C985 /* ModelStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C5721F8EC280089C985 /* ModelStudent.swift */; };
@@ -73,9 +75,11 @@
 		2C6EC7B0220060AE0095A759 /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
 		2C6EC7B32200B6CA0095A759 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		2C6EC7B52200B7980095A759 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2C6EC7B72201AB100095A759 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		2C6EC7BA2201AD3D0095A759 /* StudentsTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentsTable.storyboard; sourceTree = "<group>"; };
 		2CCD9C3721F8EA030089C985 /* "Best" students.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "\"Best\" students.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCD9C3A21F8EA030089C985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CCD9C3C21F8EA030089C985 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTable.swift; sourceTree = "<group>"; };
 		2CCD9C4221F8EA030089C985 /* My_Best_students.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Best_students.xcdatamodel; sourceTree = "<group>"; };
 		2CCD9C4921F8EA040089C985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCD9C5721F8EC280089C985 /* ModelStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStudent.swift; sourceTree = "<group>"; };
@@ -96,7 +100,7 @@
 		2C6A06CC21FF161C000F0DB1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2CCD9C3C21F8EA030089C985 /* ViewController.swift */,
+				2C6EC7B72201AB100095A759 /* MainNavigationController.swift */,
 				2C6EC7B52200B7980095A759 /* Main.storyboard */,
 			);
 			path = Main;
@@ -170,13 +174,22 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		2C6EC7B22200B6760095A759 /* GameExample */ = {
+		2C6EC7B22200B6760095A759 /* GameExamplePage */ = {
 			isa = PBXGroup;
 			children = (
 				2C6EC7B32200B6CA0095A759 /* GameController.swift */,
 				2CCD9C3E21F8EA030089C985 /* Game.storyboard */,
 			);
-			path = GameExample;
+			path = GameExamplePage;
+			sourceTree = "<group>";
+		};
+		2C6EC7B92201ACD80095A759 /* StudentsTablePage */ = {
+			isa = PBXGroup;
+			children = (
+				2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */,
+				2C6EC7BA2201AD3D0095A759 /* StudentsTable.storyboard */,
+			);
+			path = StudentsTablePage;
 			sourceTree = "<group>";
 		};
 		2CCD9C2E21F8EA030089C985 = {
@@ -231,7 +244,8 @@
 		2CCD9C5321F8EB6D0089C985 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C6EC7B22200B6760095A759 /* GameExample */,
+				2C6EC7B92201ACD80095A759 /* StudentsTablePage */,
+				2C6EC7B22200B6760095A759 /* GameExamplePage */,
 				2C6A06CC21FF161C000F0DB1 /* Main */,
 				2CCD9C5621F8EBA10089C985 /* App */,
 			);
@@ -331,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6EC77821FF1D870095A759 /* HallOfTheMountainKing.mp3 in Resources */,
+				2C6EC7BB2201AD3D0095A759 /* StudentsTable.storyboard in Resources */,
 				2C6EC7A621FF27310095A759 /* Localizable.strings in Resources */,
 				2C6EC78621FF1D870095A759 /* checker_top.png in Resources */,
 				2CCD9C6021F98D050089C985 /* Images.xcassets in Resources */,
@@ -363,7 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CCD9C3D21F8EA030089C985 /* ViewController.swift in Sources */,
+				2C6EC7B82201AB100095A759 /* MainNavigationController.swift in Sources */,
+				2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */,
 				2C6EC78D21FF1F4B0095A759 /* ExUIButton.swift in Sources */,
 				2C6EC78A21FF1F340095A759 /* ExUILabel.swift in Sources */,
 				2CCD9C5821F8EC280089C985 /* ModelStudent.swift in Sources */,
