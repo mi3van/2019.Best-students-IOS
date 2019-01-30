@@ -6,4 +6,8 @@
 //  Copyright © 2019 Example. All rights reserved.
 //
 
-import Foundation
+class ModelStudent {
+    var name = ""
+    var surname = ""
+    var assessment: Int = 0
+}

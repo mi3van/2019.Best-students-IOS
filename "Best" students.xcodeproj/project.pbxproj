@@ -35,6 +35,7 @@
 		2C6EC7B62200B7980095A759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6EC7B52200B7980095A759 /* Main.storyboard */; };
 		2C6EC7B82201AB100095A759 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7B72201AB100095A759 /* MainNavigationController.swift */; };
 		2C6EC7BB2201AD3D0095A759 /* StudentsTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6EC7BA2201AD3D0095A759 /* StudentsTable.storyboard */; };
+		2C6EC7BD2201B2300095A759 /* ExUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7BC2201B2300095A759 /* ExUINavigationItem.swift */; };
 		2CCD9C3B21F8EA030089C985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3A21F8EA030089C985 /* AppDelegate.swift */; };
 		2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */; };
 		2CCD9C4321F8EA030089C985 /* My_Best_students.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C4121F8EA030089C985 /* My_Best_students.xcdatamodeld */; };
@@ -77,6 +78,7 @@
 		2C6EC7B52200B7980095A759 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C6EC7B72201AB100095A759 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		2C6EC7BA2201AD3D0095A759 /* StudentsTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentsTable.storyboard; sourceTree = "<group>"; };
+		2C6EC7BC2201B2300095A759 /* ExUINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExUINavigationItem.swift; sourceTree = "<group>"; };
 		2CCD9C3721F8EA030089C985 /* "Best" students.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "\"Best\" students.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCD9C3A21F8EA030089C985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTable.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				2C6A06CE21FF16D0000F0DB1 /* XIBLocalizable.swift */,
 				2C6EC78921FF1F340095A759 /* ExUILabel.swift */,
 				2C6EC78C21FF1F4B0095A759 /* ExUIButton.swift */,
+				2C6EC7BC2201B2300095A759 /* ExUINavigationItem.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				2C6EC7B82201AB100095A759 /* MainNavigationController.swift in Sources */,
 				2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */,
 				2C6EC78D21FF1F4B0095A759 /* ExUIButton.swift in Sources */,
+				2C6EC7BD2201B2300095A759 /* ExUINavigationItem.swift in Sources */,
 				2C6EC78A21FF1F340095A759 /* ExUILabel.swift in Sources */,
 				2CCD9C5821F8EC280089C985 /* ModelStudent.swift in Sources */,
 				2C6EC7B42200B6CA0095A759 /* GameController.swift in Sources */,
