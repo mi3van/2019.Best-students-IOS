@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,31 +15,159 @@
             <objects>
                 <viewController storyboardIdentifier="StudentItemPage" id="Kxd-hI-a1g" customClass="StudentItemPage" customModule="_Best__students" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W1X-wq-tab">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqA-E2-EP7">
-                                <rect key="frame" x="0.0" y="35" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeB-EE-0V6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOg-b2-O4Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Name" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7a-Fo-h6d">
+                                                <rect key="frame" x="32" y="16" width="366" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_page_name"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" tag="8" contentMode="scaleToFill" restorationIdentifier="NameEdit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xfi-fG-ea8">
+                                                <rect key="frame" x="16" y="44.5" width="382" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="bBi-rm-8XP"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="doneNameTextFieldAction:" destination="Kxd-hI-a1g" eventType="editingDidEndOnExit" id="2fB-xp-nFg"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Surname" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aId-hb-Tf8">
+                                                <rect key="frame" x="32" y="104.5" width="366" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_page_surname"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Average" text="Average" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-4l-VEn">
+                                                <rect key="frame" x="32" y="193" width="366" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_page_average"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" tag="9" contentMode="scaleToFill" restorationIdentifier="SurnameEdit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FtW-rT-0Wb">
+                                                <rect key="frame" x="16" y="133" width="382" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="WsU-Cf-tw9"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="doneSurNameTextFieldAction:" destination="Kxd-hI-a1g" eventType="editingDidEndOnExit" id="32Y-XW-enA"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="10" contentMode="scaleToFill" restorationIdentifier="AverageEdit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zez-hQ-Dps">
+                                                <rect key="frame" x="16" y="221.5" width="382" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="LXK-I5-mlu"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="doneAverageTextFieldAction:" destination="Kxd-hI-a1g" eventType="editingDidEndOnExit" id="NjR-hD-p9f"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FtW-rT-0Wb" firstAttribute="leading" secondItem="IOg-b2-O4Y" secondAttribute="leading" constant="16" id="0Uo-d2-FMN"/>
+                                            <constraint firstItem="aId-hb-Tf8" firstAttribute="top" secondItem="xfi-fG-ea8" secondAttribute="bottom" constant="24" id="7v0-Lp-DlQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ip-4l-VEn" secondAttribute="trailing" constant="16" id="8pe-OZ-06A"/>
+                                            <constraint firstItem="zez-hQ-Dps" firstAttribute="top" secondItem="6ip-4l-VEn" secondAttribute="bottom" constant="8" id="AUe-50-agi"/>
+                                            <constraint firstAttribute="trailing" secondItem="FtW-rT-0Wb" secondAttribute="trailing" constant="16" id="Edt-dr-kil"/>
+                                            <constraint firstAttribute="trailing" secondItem="zez-hQ-Dps" secondAttribute="trailing" constant="16" id="Evc-br-I9c"/>
+                                            <constraint firstAttribute="trailing" secondItem="xfi-fG-ea8" secondAttribute="trailing" constant="16" id="IeK-ns-uno"/>
+                                            <constraint firstItem="6ip-4l-VEn" firstAttribute="top" secondItem="FtW-rT-0Wb" secondAttribute="bottom" constant="24" id="Mag-Fa-N7B"/>
+                                            <constraint firstAttribute="trailing" secondItem="aId-hb-Tf8" secondAttribute="trailing" constant="16" id="OkK-RJ-wEQ"/>
+                                            <constraint firstItem="aId-hb-Tf8" firstAttribute="leading" secondItem="IOg-b2-O4Y" secondAttribute="leading" constant="32" id="b8K-de-tkX"/>
+                                            <constraint firstItem="6ip-4l-VEn" firstAttribute="leading" secondItem="IOg-b2-O4Y" secondAttribute="leading" constant="32" id="bzT-LH-ZMm"/>
+                                            <constraint firstItem="zez-hQ-Dps" firstAttribute="leading" secondItem="IOg-b2-O4Y" secondAttribute="leading" constant="16" id="dwc-rP-KTx"/>
+                                            <constraint firstItem="xfi-fG-ea8" firstAttribute="leading" secondItem="IOg-b2-O4Y" secondAttribute="leading" constant="16" id="hgW-tF-GNJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y7a-Fo-h6d" secondAttribute="trailing" constant="16" id="jlF-Ds-3rl"/>
+                                            <constraint firstItem="Y7a-Fo-h6d" firstAttribute="leading" secondItem="IOg-b2-O4Y" secondAttribute="leading" constant="32" id="kGj-T2-LBD"/>
+                                            <constraint firstItem="FtW-rT-0Wb" firstAttribute="top" secondItem="aId-hb-Tf8" secondAttribute="bottom" constant="8" id="mvA-kD-G4o"/>
+                                            <constraint firstItem="xfi-fG-ea8" firstAttribute="top" secondItem="Y7a-Fo-h6d" secondAttribute="bottom" constant="8" id="q1z-LY-GNV"/>
+                                            <constraint firstItem="Y7a-Fo-h6d" firstAttribute="top" secondItem="IOg-b2-O4Y" secondAttribute="top" constant="16" id="sPa-q7-q7c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IOg-b2-O4Y" firstAttribute="width" secondItem="IeB-EE-0V6" secondAttribute="width" id="4iD-uF-xgk"/>
+                                    <constraint firstAttribute="bottom" secondItem="IOg-b2-O4Y" secondAttribute="bottom" id="FuS-eW-aAK"/>
+                                    <constraint firstItem="IOg-b2-O4Y" firstAttribute="top" secondItem="IeB-EE-0V6" secondAttribute="top" id="boG-NJ-i58"/>
+                                    <constraint firstItem="IOg-b2-O4Y" firstAttribute="leading" secondItem="IeB-EE-0V6" secondAttribute="leading" id="dAQ-mQ-F9H"/>
+                                    <constraint firstAttribute="trailing" secondItem="IOg-b2-O4Y" secondAttribute="trailing" id="hOE-Xi-UJ2"/>
+                                    <constraint firstItem="IOg-b2-O4Y" firstAttribute="height" secondItem="IeB-EE-0V6" secondAttribute="height" id="rDk-hF-amw"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.58635512052919891" green="0.85116592639593902" blue="0.68367110870015746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lae-Me-Hib" firstAttribute="trailing" secondItem="IeB-EE-0V6" secondAttribute="trailing" id="8HC-nO-l9X"/>
+                            <constraint firstItem="IeB-EE-0V6" firstAttribute="top" secondItem="lae-Me-Hib" secondAttribute="top" id="8gB-OD-d6q"/>
+                            <constraint firstItem="IeB-EE-0V6" firstAttribute="height" secondItem="lae-Me-Hib" secondAttribute="height" id="Nmz-ZU-Ikx"/>
+                            <constraint firstItem="IeB-EE-0V6" firstAttribute="leading" secondItem="lae-Me-Hib" secondAttribute="leading" id="mss-mb-PP8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lae-Me-Hib"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hqg-go-h55">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="JiM-hR-CxC"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="G5e-aB-ako"/>
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="JiM-hR-CxC">
+                            <connections>
+                                <action selector="CancelAction:" destination="Kxd-hI-a1g" id="cvg-1T-oCg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="G5e-aB-ako">
+                            <connections>
+                                <action selector="SaveAction:" destination="Kxd-hI-a1g" id="O1R-F1-cKo"/>
+                            </connections>
+                        </barButtonItem>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_btn"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_entry_title"/>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
+                    <connections>
+                        <outlet property="AverageTextField" destination="zez-hQ-Dps" id="pSZ-Jt-hMH"/>
+                        <outlet property="NameTextField" destination="xfi-fG-ea8" id="mOe-MX-RbN"/>
+                        <outlet property="SurnameTextField" destination="FtW-rT-0Wb" id="pwn-mc-pzf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHZ-0d-LNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="97"/>
+            <point key="canvasLocation" x="140" y="96.059113300492612"/>
         </scene>
     </scenes>
 </document>

@@ -10,6 +10,13 @@
 "tap_btn_title" = "Нажми на меня!";
 "students_title" = "Студенты";
 
-"edit_btn" = "Редактировать";
-"cancel_btn" = "Отмена";
-"save_btn" = "Сохранить";
+"edit_entry_title" = "Редактировать";
+"create_entry_title" = "Создать запись";
+
+"edit_page_name" = "Имя:";
+"edit_page_surname" = "Фамилия:";
+"edit_page_average" = "Средний балл:";
+
+"input_error_title" = "Ошибка входных данных";
+"input_error_letters" = "Пожалуйста, заполните правильно поле %@ Русские или Английские буквы без пробелов";
+"input_error_numbers" = "Пожалуйста, заполните правильно поле %@ Число от 1 до 5";

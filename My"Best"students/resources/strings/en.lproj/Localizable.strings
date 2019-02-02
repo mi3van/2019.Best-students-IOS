@@ -10,6 +10,13 @@
 "tap_btn_title" = "Tap me!";
 "students_title" = "Students";
 
-"edit_btn" = "Edit";
-"cancel_btn" = "Cancel";
-"save_btn" = "Save";
+"edit_entry_title" = "Edit entry";
+"create_entry_title" = "New Entry";
+
+"edit_page_name" = "Name:";
+"edit_page_surname" = "Surname:";
+"edit_page_average" = "Average grade:";
+
+"input_error_title" = "Input error";
+"input_error_letters" = "Please fill in the correct field %@ Russian or English letters without spaces";
+"input_error_numbers" = "Please fill in the correct field %@ Number from 1 to 5";

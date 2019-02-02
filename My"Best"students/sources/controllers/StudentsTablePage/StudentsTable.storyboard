@@ -56,7 +56,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="zuX-sp-axg">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="9g2-2P-msb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9g2-2P-msb">
                             <connections>
                                 <segue destination="DBY-BD-epg" kind="show" id="2Vg-up-P5D"/>
                             </connections>

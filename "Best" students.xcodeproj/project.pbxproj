@@ -40,6 +40,8 @@
 		2C6EC7C22201CAAC0095A759 /* StudentItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6EC7C12201CAAC0095A759 /* StudentItem.storyboard */; };
 		2C6EC7C42201FD370095A759 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7C32201FD370095A759 /* DataHelper.swift */; };
 		2C6EC7C62202073D0095A759 /* AppCommonKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7C52202073D0095A759 /* AppCommonKeys.swift */; };
+		2C6EC7C8220432640095A759 /* ExUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7C7220432640095A759 /* ExUITextField.swift */; };
+		2C6EC7CA2204BAC50095A759 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EC7C92204BAC50095A759 /* Utils.swift */; };
 		2CCD9C3B21F8EA030089C985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3A21F8EA030089C985 /* AppDelegate.swift */; };
 		2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */; };
 		2CCD9C4321F8EA030089C985 /* My_Best_students.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C4121F8EA030089C985 /* My_Best_students.xcdatamodeld */; };
@@ -87,6 +89,8 @@
 		2C6EC7C12201CAAC0095A759 /* StudentItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentItem.storyboard; sourceTree = "<group>"; };
 		2C6EC7C32201FD370095A759 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		2C6EC7C52202073D0095A759 /* AppCommonKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommonKeys.swift; sourceTree = "<group>"; };
+		2C6EC7C7220432640095A759 /* ExUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExUITextField.swift; sourceTree = "<group>"; };
+		2C6EC7C92204BAC50095A759 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2CCD9C3721F8EA030089C985 /* "Best" students.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "\"Best\" students.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCD9C3A21F8EA030089C985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTable.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				2C6EC78921FF1F340095A759 /* ExUILabel.swift */,
 				2C6EC78C21FF1F4B0095A759 /* ExUIButton.swift */,
 				2C6EC7BC2201B2300095A759 /* ExUINavigationItem.swift */,
+				2C6EC7C7220432640095A759 /* ExUITextField.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			children = (
 				2C6EC7B0220060AE0095A759 /* MusicHelper.swift */,
 				2C6EC7C32201FD370095A759 /* DataHelper.swift */,
+				2C6EC7C92204BAC50095A759 /* Utils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -334,6 +340,9 @@
 		2CCD9C2F21F8EA030089C985 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					100,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Example;
@@ -403,11 +412,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6EC7B82201AB100095A759 /* MainNavigationController.swift in Sources */,
+				2C6EC7C8220432640095A759 /* ExUITextField.swift in Sources */,
 				2C6EC7C42201FD370095A759 /* DataHelper.swift in Sources */,
 				2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */,
 				2C6EC78D21FF1F4B0095A759 /* ExUIButton.swift in Sources */,
 				2C6EC7BD2201B2300095A759 /* ExUINavigationItem.swift in Sources */,
 				2C6EC78A21FF1F340095A759 /* ExUILabel.swift in Sources */,
+				2C6EC7CA2204BAC50095A759 /* Utils.swift in Sources */,
 				2CCD9C5821F8EC280089C985 /* ModelStudent.swift in Sources */,
 				2C6EC7B42200B6CA0095A759 /* GameController.swift in Sources */,
 				2C6EC7C02201CA9C0095A759 /* StudentItemPage.swift in Sources */,
