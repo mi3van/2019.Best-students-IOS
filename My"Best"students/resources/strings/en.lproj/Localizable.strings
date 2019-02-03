@@ -20,3 +20,6 @@
 "input_error_title" = "Input error";
 "input_error_letters" = "Please fill in the correct field %@ Russian or English letters without spaces";
 "input_error_numbers" = "Please fill in the correct field %@ Number from 1 to 5";
+
+"error_title" = "Error";
+"error_data_description" = "Error saving data";

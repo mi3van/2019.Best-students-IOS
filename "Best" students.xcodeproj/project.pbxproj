@@ -46,8 +46,9 @@
 		2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */; };
 		2CCD9C4321F8EA030089C985 /* My_Best_students.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C4121F8EA030089C985 /* My_Best_students.xcdatamodeld */; };
 		2CCD9C4821F8EA040089C985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCD9C4621F8EA040089C985 /* LaunchScreen.storyboard */; };
-		2CCD9C5821F8EC280089C985 /* ModelStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCD9C5721F8EC280089C985 /* ModelStudent.swift */; };
 		2CCD9C6021F98D050089C985 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCD9C5F21F98D050089C985 /* Images.xcassets */; };
+		2CD92A8222073FEC00715991 /* StudentsMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD92A8022073FEC00715991 /* StudentsMO+CoreDataClass.swift */; };
+		2CD92A8322073FEC00715991 /* StudentsMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD92A8122073FEC00715991 /* StudentsMO+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,8 +97,9 @@
 		2CCD9C3C21F8EA030089C985 /* StudentsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTable.swift; sourceTree = "<group>"; };
 		2CCD9C4221F8EA030089C985 /* My_Best_students.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Best_students.xcdatamodel; sourceTree = "<group>"; };
 		2CCD9C4921F8EA040089C985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CCD9C5721F8EC280089C985 /* ModelStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStudent.swift; sourceTree = "<group>"; };
 		2CCD9C5F21F98D050089C985 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CD92A8022073FEC00715991 /* StudentsMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentsMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2CD92A8122073FEC00715991 /* StudentsMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentsMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,8 +250,8 @@
 		2CCD9C5121F8EAA20089C985 /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				2CD92A7F22073FBD00715991 /* models */,
 				2C6EC7AF220060920095A759 /* utils */,
-				2CCD9C5421F8EB800089C985 /* models */,
 				2CCD9C5321F8EB6D0089C985 /* controllers */,
 			);
 			path = sources;
@@ -280,14 +282,6 @@
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		2CCD9C5421F8EB800089C985 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				2CCD9C5721F8EC280089C985 /* ModelStudent.swift */,
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
 		2CCD9C5621F8EBA10089C985 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +306,15 @@
 			children = (
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		2CD92A7F22073FBD00715991 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2CD92A8022073FEC00715991 /* StudentsMO+CoreDataClass.swift */,
+				2CD92A8122073FEC00715991 /* StudentsMO+CoreDataProperties.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,14 +417,15 @@
 				2C6EC7B82201AB100095A759 /* MainNavigationController.swift in Sources */,
 				2C6EC7C8220432640095A759 /* ExUITextField.swift in Sources */,
 				2C6EC7C42201FD370095A759 /* DataHelper.swift in Sources */,
+				2CD92A8222073FEC00715991 /* StudentsMO+CoreDataClass.swift in Sources */,
 				2CCD9C3D21F8EA030089C985 /* StudentsTable.swift in Sources */,
 				2C6EC78D21FF1F4B0095A759 /* ExUIButton.swift in Sources */,
 				2C6EC7BD2201B2300095A759 /* ExUINavigationItem.swift in Sources */,
 				2C6EC78A21FF1F340095A759 /* ExUILabel.swift in Sources */,
 				2C6EC7CA2204BAC50095A759 /* Utils.swift in Sources */,
-				2CCD9C5821F8EC280089C985 /* ModelStudent.swift in Sources */,
 				2C6EC7B42200B6CA0095A759 /* GameController.swift in Sources */,
 				2C6EC7C02201CA9C0095A759 /* StudentItemPage.swift in Sources */,
+				2CD92A8322073FEC00715991 /* StudentsMO+CoreDataProperties.swift in Sources */,
 				2C6A06CF21FF16D0000F0DB1 /* XIBLocalizable.swift in Sources */,
 				2C6EC7B1220060AE0095A759 /* MusicHelper.swift in Sources */,
 				2C6EC7C62202073D0095A759 /* AppCommonKeys.swift in Sources */,

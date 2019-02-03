@@ -8,35 +8,22 @@
 import UIKit
 
 class StudentsTable: UITableViewController {
-    var students: [ModelStudent] = []
+    var students: [StudentsMO] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.initTable()
     }
     
     private func initTable() {
-        let data: AnyObject? = DataHelper.loadData(with: AppCommonKeys.SAVE_STUDENTS_KEY)
+        let data: [StudentsMO]? = DataHelper.loadDataStudents() ?? nil
         if data != nil {
-            students = data as! [ModelStudent]
+            students = data!
         }
-        //var student = ModelStudent()
-        //student.name = "Bill"
-        //student.surname = "Evans"
-        //student.assessment = 4
-        //students.append(student)
-        //
-        //student = ModelStudent()
-        //student.name = "Oscar"
-        //student.surname = "Peterson"
-        //student.assessment = 5
-        //students.append(student)
-        //
-        //student = ModelStudent()
-        //student.name = "Dave"
-        //student.surname = "Brubeck"
-        //student.assessment = 3
-        //students.append(student)
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

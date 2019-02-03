@@ -7,43 +7,45 @@
 //
 
 import UIKit
+import CoreData
 
 class DataHelper {
-    static func saveData(filename: String, sData: AnyObject) -> Bool {
-        let fullPath = getDocumentsDirectory().appendingPathComponent(filename)
-        var isSuccess: Bool = false
-        if #available(iOS 11.0, *) {
+    static func saveDataStudent(name: String, surname: String, assessment: Int) ->
+        Bool {
+            var isSuccess: Bool = true
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.managedObjectContext
+            
+            let entityDescription =
+                NSEntityDescription.entity(forEntityName: AppCommonKeys.STUDENTS_MODEL_KEY,
+                                           in: context)
+            
+            let student = StudentsMO(entity: entityDescription!,
+                                     insertInto: context)
+            
+            student.name = name
+            student.surname = surname
+            student.assessment = Int16(assessment)
+            
             do {
-                let data = try NSKeyedArchiver.archivedData(withRootObject: sData, requiringSecureCoding: false) as AnyObject
-                try data.write(to: fullPath)
-                isSuccess = true
-            } catch {
-                print("Failed save data")
+                try context.save()
+            } catch _ as NSError {
+                isSuccess = false
             }
-        } else {
-            let pathString = fullPath.appendingPathComponent("Data").path
-            isSuccess = NSKeyedArchiver.archiveRootObject(saveData, toFile: pathString)
-        }
-        return isSuccess
+            
+            return isSuccess
     }
     
-    static func loadData(with filename: String) -> AnyObject? {
-        let fullPath = getDocumentsDirectory().appendingPathComponent(filename)
-        let pathString = fullPath.appendingPathComponent("Data").path
-        if let nsData = NSData(contentsOfFile: pathString) {
-            do {
-                let data = Data(referencing:nsData)
-                let possibleObject = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
-                return possibleObject as AnyObject
-            } catch {
-                print("Couldn't read file.")
-            }
+    static func loadDataStudents() -> [StudentsMO]? {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext
+        
+        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: AppCommonKeys.STUDENTS_MODEL_KEY)
+        do {
+            let fetchedEmployees = try context.fetch(employeesFetch) as! [StudentsMO]
+            return fetchedEmployees
+        } catch {
+            return nil
         }
-        return nil
-    }
-    
-    static private func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
     }
 }

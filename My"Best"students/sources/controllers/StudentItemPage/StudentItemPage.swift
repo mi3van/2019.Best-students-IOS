@@ -33,9 +33,10 @@ class StudentItemPage: UIViewController {
     }
     
     @IBAction func doneAverageTextFieldAction(_ sender: UITextField) {
-        if (self.checkFieldAndShowAlert(textField: averageTextField)) {
+        if (self.checkAllTextFields()) {
             sender.becomeFirstResponder()
             sender.resignFirstResponder()
+            self.saveData()
         }
     }
     
@@ -85,6 +86,12 @@ class StudentItemPage: UIViewController {
     }
     
     @IBAction func SaveAction(_ sender: Any) {
+        if (self.checkAllTextFields()) {
+            self.saveData()
+        }
+    }
+    
+    private func checkAllTextFields() -> Bool {
         var availableSave = false
         availableSave = checkFieldAndShowAlert(textField: nameTextField)
         if (availableSave) {
@@ -92,6 +99,18 @@ class StudentItemPage: UIViewController {
         }
         if (availableSave) {
             availableSave = checkFieldAndShowAlert(textField: averageTextField)
+        }
+        return availableSave
+    }
+    
+    private func saveData() {
+        let name = nameTextField.text!
+        let surname = surnameTextField.text!
+        let assessment = Int(averageTextField.text!)!
+        if (DataHelper.saveDataStudent(name: name, surname: surname, assessment: assessment)) {
+            navigationController?.popViewController(animated: true)
+        } else {
+            Utils.showAlert(controller: self, title: NSLocalizedString("error_title", comment: ""), message: NSLocalizedString("error_data_description", comment: ""))
         }
     }
 }

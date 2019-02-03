@@ -7,6 +7,6 @@
 //
 class AppCommonKeys {
     
-    static let SAVE_STUDENTS_KEY: String = "SAVE_STUDENTS_KEY"
+    static let STUDENTS_MODEL_KEY: String = "Students"
 
 }
