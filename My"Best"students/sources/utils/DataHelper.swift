@@ -48,4 +48,15 @@ class DataHelper {
             return nil
         }
     }
-}
+    
+    static func deleteStudent(student: StudentsMO) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext
+        context.delete(student)
+        
+        do {
+            try context.save()
+        } catch {
+            
+        }
+    }}
