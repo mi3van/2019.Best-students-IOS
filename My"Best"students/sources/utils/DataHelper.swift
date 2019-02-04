@@ -42,8 +42,8 @@ class DataHelper {
         
         let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: AppCommonKeys.STUDENTS_MODEL_KEY)
         do {
-            let fetchedEmployees = try context.fetch(employeesFetch) as! [StudentsMO]
-            return fetchedEmployees
+            let students = try context.fetch(employeesFetch) as! [StudentsMO]
+            return students
         } catch {
             return nil
         }
@@ -59,4 +59,24 @@ class DataHelper {
         } catch {
             
         }
-    }}
+    }
+    
+    static func updateStudent(student: StudentsMO, positionStud: Int) -> Bool {
+        var isSuccess = true
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext
+        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: AppCommonKeys.STUDENTS_MODEL_KEY)
+        
+        
+        do {
+            let loadedStudents = try context.fetch(employeesFetch) as! [StudentsMO]
+            var savedStudent = loadedStudents[positionStud]
+            savedStudent = student
+            
+            try context.save()
+        } catch {
+            isSuccess = false
+        }
+        return isSuccess
+    }
+}

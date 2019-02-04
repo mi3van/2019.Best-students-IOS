@@ -8,8 +8,8 @@
 import UIKit
 
 class StudentsTable: UITableViewController {
-    var students: [StudentsMO] = []
-    
+    var students: [StudentsMO]! = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,14 +34,18 @@ class StudentsTable: UITableViewController {
         return students.count
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return YES if you want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let position = indexPath.row
+        let storyboard = UIStoryboard(name: "StudentItem", bundle: nil)
+        let itemPage = storyboard.instantiateViewController(withIdentifier: "StudentItemPage") as! StudentItemPage
+        itemPage.positionStudentInArray = position
+        itemPage.studentForEdit = students[position]
+        navigationController?.pushViewController(itemPage, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            DataHelper.deleteStudent(student: students[indexPath[1]])
+            DataHelper.deleteStudent(student: students[indexPath.row])
             self.initTable()
         }
     }

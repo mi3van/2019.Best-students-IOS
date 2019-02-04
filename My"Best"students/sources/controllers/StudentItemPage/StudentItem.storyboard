@@ -156,13 +156,16 @@
                             </connections>
                         </barButtonItem>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="edit_entry_title"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="create_entry_title"/>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
                         <outlet property="AverageTextField" destination="zez-hQ-Dps" id="pSZ-Jt-hMH"/>
                         <outlet property="NameTextField" destination="xfi-fG-ea8" id="mOe-MX-RbN"/>
                         <outlet property="SurnameTextField" destination="FtW-rT-0Wb" id="pwn-mc-pzf"/>
+                        <outlet property="averageTextField" destination="zez-hQ-Dps" id="2uh-DZ-ofn"/>
+                        <outlet property="nameTextField" destination="xfi-fG-ea8" id="VV4-b3-b7B"/>
+                        <outlet property="surnameTextField" destination="FtW-rT-0Wb" id="VRQ-H5-Ycc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHZ-0d-LNa" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,15 +9,25 @@
 import UIKit
 
 class StudentItemPage: UIViewController {
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var surnameTextField: UITextField!
-    @IBOutlet weak var averageTextField: UITextField!
-    
     private let characterSetNum = "12345"
     private let characterSetAlphabet = "abcdefghijklmnopqrstuvwxyzабвгдежзийклмнопрстуфхцчшщъыьэюяё"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var averageTextField: UITextField!
+
+    var positionStudentInArray = -1
+    var studentForEdit: StudentsMO!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (positionStudentInArray > -1 && studentForEdit != nil) {
+            // editing student
+            nameTextField.text = studentForEdit.name
+            surnameTextField.text = studentForEdit.surname
+            averageTextField.text = String(studentForEdit.assessment)
+            self.title = NSLocalizedString("edit_entry_title", comment: "")
+        }
     }
     
     @IBAction func doneNameTextFieldAction(_ sender: UITextField) {
@@ -107,7 +117,17 @@ class StudentItemPage: UIViewController {
         let name = nameTextField.text!
         let surname = surnameTextField.text!
         let assessment = Int(averageTextField.text!)!
-        if (DataHelper.saveDataStudent(name: name, surname: surname, assessment: assessment)) {
+        
+        var isSuccessSave = false
+        if (positionStudentInArray > -1) {// was edited
+            studentForEdit.name = name
+            studentForEdit.surname = surname
+            studentForEdit.assessment = Int16(assessment)
+            isSuccessSave = DataHelper.updateStudent(student: studentForEdit, positionStud: positionStudentInArray)
+        } else {
+            isSuccessSave = DataHelper.saveDataStudent(name: name, surname: surname, assessment: assessment)
+        }
+        if (isSuccessSave) {
             navigationController?.popViewController(animated: true)
         } else {
             Utils.showAlert(controller: self, title: NSLocalizedString("error_title", comment: ""), message: NSLocalizedString("error_data_description", comment: ""))

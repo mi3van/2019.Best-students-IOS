@@ -45,9 +45,6 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.79291616090000006" green="1" blue="0.86393091619999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="DBY-BD-epg" kind="show" id="uFT-Q2-MZg"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Title" id="zuX-sp-axg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9g2-2P-msb">
                             <connections>
-                                <segue destination="DBY-BD-epg" kind="show" id="2Vg-up-P5D"/>
+                                <segue destination="DBY-BD-epg" kind="show" id="M9e-9J-d88"/>
                             </connections>
                         </barButtonItem>
                         <userDefinedRuntimeAttributes>
@@ -79,7 +76,4 @@
             <point key="canvasLocation" x="966" y="54"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="uFT-Q2-MZg"/>
-    </inferredMetricsTieBreakers>
 </document>
